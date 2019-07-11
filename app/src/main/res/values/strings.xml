@@ -5,8 +5,8 @@
     <string name="username">Username</string>
     <string name="text_main_dailygoal_value_placeholder">_</string>
     <string name="text_main_consumed_value_placeholder">_</string>
-    <string name="daily_goal">Daily goal:</string>
-    <string name="consumed">Consumed:</string>
+    <string name="daily_goal">Daily goal </string>
+    <string name="consumed">Consumed </string>
     <string name="drink_button_description">Drink button</string>
     <string name="statistics">Statistics</string>
     <string name="profile">Profile</string>
