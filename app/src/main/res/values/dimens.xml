@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_main_small">24sp</dimen>
+    <dimen name="textsize_main_large">48sp</dimen>
+    <dimen name="textsize_main_medium">36sp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="radius_5dp">5dp</dimen>
+</resources>

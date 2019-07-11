@@ -11,6 +11,7 @@ An Android application that reminds you to drink water and track daily water int
 7. Track progress (e.g. how many days in a row the hydration level was satisfied)
 
 ### General Todos
+* Add login / sign up functions via Google / email
 * Change icon and splash screen
 * Create **Statistics** and **Settings** activities
 * Create customizable notifications system
