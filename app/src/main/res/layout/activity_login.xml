@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/wir_text"
+        layout="@layout/wir_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layout_signup_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wir_text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:orientation="vertical">
+
+        <!--todo add autofill for fields-->
+
+        <Button
+            android:id="@+id/btn_google"
+            style="@style/CustomBtnSignin"
+            android:layout_width="@dimen/width_250"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_signin"
+            android:text="@string/signin_google" />
+
+        <Button
+            android:id="@+id/btn_email"
+            style="@style/CustomBtnSignin"
+            android:layout_width="@dimen/width_250"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_signin"
+            android:text="@string/signin_email" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/product_phrase_text"
+        layout="@layout/product_phrase_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
