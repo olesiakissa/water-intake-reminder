@@ -11,4 +11,15 @@
     <string name="statistics">Statistics</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
+    <string name="water">Water</string>
+    <string name="intake">Intake</string>
+    <string name="reminder">Reminder</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="confirm_signup">Confirm signup</string>
+    <string name="signin_google">Sign in with Google</string>
+    <string name="signin_email">Sign in with Email</string>
+    <string name="product_phrase">Keep track of your hydration level</string>
 </resources>

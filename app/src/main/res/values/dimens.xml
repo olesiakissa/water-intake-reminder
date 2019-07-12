@@ -6,4 +6,7 @@
     <dimen name="margin_24dp">24dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="radius_5dp">5dp</dimen>
+    <dimen name="width_250">250dp</dimen>
+    <dimen name="btn_done_signup_size">64dp</dimen>
+    <dimen name="btn_cradius_32">32dp</dimen>
 </resources>
