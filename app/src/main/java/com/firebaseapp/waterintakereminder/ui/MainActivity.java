@@ -50,10 +50,11 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent
                         (MainActivity.this, SettingsActivity.class));
                 return true;
-            // TODO: 7/12/19 Add handlers for these cases
             case R.id.action_profile:
-                displayToast("TBA");
+                startActivity(new Intent
+                        (MainActivity.this, ProfileActivity.class));
                 return true;
+            // TODO: 7/12/19 Add handler for this case
             case R.id.action_statistics:
                 displayToast("TBA");
                 return true;
@@ -65,5 +66,5 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
-    
+
 }
