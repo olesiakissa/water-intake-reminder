@@ -14,12 +14,22 @@
     <string name="water">Water</string>
     <string name="intake">Intake</string>
     <string name="reminder">Reminder</string>
-    <string name="name">Name</string>
     <string name="email">Email</string>
+    <string name="name">Name</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="confirm_signup">Confirm signup</string>
     <string name="signin_google">Sign in with Google</string>
     <string name="signin_email">Sign in with Email</string>
     <string name="product_phrase">Keep track of your hydration level</string>
+    <string name="age">Age</string>
+    <string name="weight">Weight</string>
+    <string name="streak">Streak</string>
+    <string name="not_added">N/A</string>
+    <string name="zero">0</string>
+    <string name="profile_water_intake_goal">Water intake goal</string>
+    <string name="water_intake_with_exercise">Water with exercise</string>
+    <string name="weight_goal">Weight goal</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>

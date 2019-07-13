@@ -17,14 +17,52 @@
         <item name="android:textStyle">italic</item>
     </style>
 
+    <style name="ProfileUserInfoLabel">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primaryDarkColor</item>
+        <item name="android:fontFamily">@font/raleway_thin</item>
+        <item name="android:textSize">@dimen/textsize_main_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_8dp</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+
+    <style name="ProfileUserInfoGoalsText">
+        <item name="android:layout_marginLeft">@dimen/margin_24dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_24dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_24dp</item>
+        <item name="android:fontFamily">@font/raleway_thin</item>
+        <item name="android:textColor">@color/primaryDarkColor</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
     <!--EditText-->
     <style name="CustomEditText">
-        <item name="android:layout_width">@dimen/width_et_250</item>
+        <item name="android:layout_width">@dimen/width_250</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:textColorHint">@color/colorAccent</item>
         <item name="android:fontFamily">@font/raleway_regular</item>
         <item name="android:background">@drawable/round_corner</item>
         <item name="android:layout_marginBottom">@dimen/margin_8dp</item>
+    </style>
+
+    <style name="ProfileUserInfoLabel.EditText">
+        <item name="android:layout_marginLeft">@dimen/margin_8dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_8dp</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:hint">@string/not_added</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ProfileUserInfoGoalsText.EditText">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:hint">@string/not_added</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 </resources>
