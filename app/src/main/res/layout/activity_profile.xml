@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_main_stayhydrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="@dimen/radius_5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_signout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_8dp"
+                    android:layout_marginRight="@dimen/margin_8dp"
+                    android:background="@drawable/ic_signout"
+                    android:onClick="signOut" />
+
+                <ImageView
+                    android:id="@+id/image_profile_userpic"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:background="@drawable/round_userpic_bg" />
+
+                <TextView
+                    android:id="@+id/text_profile_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_profile_userpic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="@string/name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textsize_main_small" />
+
+                <LinearLayout
+                    android:id="@+id/layout_info_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_profile_username"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/layout_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_profile_age"
+                            style="@style/ProfileUserInfoLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/age"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/text_profile_age_value"
+                            style="@style/ProfileUserInfoLabel.EditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_profile_weight"
+                            style="@style/ProfileUserInfoLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weight"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/text_profile_weight_value"
+                            style="@style/ProfileUserInfoLabel.EditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_streak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_profile_streak"
+                            style="@style/ProfileUserInfoLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/streak"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/text_profile_streak_value"
+                            style="@style/ProfileUserInfoLabel.EditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/zero"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_profile_goals"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_8dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0.2"
+            app:cardCornerRadius="@dimen/radius_5dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_goals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_water_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_profile_water_dailygoal"
+                        style="@style/ProfileUserInfoGoalsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_water_intake_goal" />
+
+                    <EditText
+                        android:id="@+id/text_profile_water_dailygoal_value"
+                        style="@style/ProfileUserInfoGoalsText.EditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_water_exercise_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_water_goals"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_profile_water_exercise_dailygoal"
+                        style="@style/ProfileUserInfoGoalsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_intake_with_exercise" />
+
+                    <EditText
+                        android:id="@+id/text_profile_water_exercise_dailygoal_value"
+                        style="@style/ProfileUserInfoGoalsText.EditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_weight_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_water_exercise_goals"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_profile_weight_goal"
+                        style="@style/ProfileUserInfoGoalsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight_goal" />
+
+                    <EditText
+                        android:id="@+id/text_profile_weight_goal_value"
+                        style="@style/ProfileUserInfoGoalsText.EditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--todo add button for saving all the changed values to db -->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/colorAccent"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+</RelativeLayout>
