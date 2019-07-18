@@ -6,18 +6,17 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebaseapp.waterintakereminder.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity
-    implements BottomNavigationView.OnNavigationItemSelectedListener {
+        implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mBottomNavigationView;
     private TextView mTextViewUsername;
@@ -38,9 +37,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, HolderActivity.class));
             finish();
         }
-
-        mTextViewUsername.setText(currentUser.getDisplayName());
-
+        if (currentUser != null)
+            mTextViewUsername.setText(currentUser.getDisplayName());
     }
 
     @Override
@@ -62,6 +60,11 @@ public class MainActivity extends AppCompatActivity
         return false;
     }
 
+    /**
+     * A customizable toast message.
+     *
+     * @param message Message to be displayed
+     */
     private void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();

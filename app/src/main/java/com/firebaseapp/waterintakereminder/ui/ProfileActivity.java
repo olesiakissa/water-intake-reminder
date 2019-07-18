@@ -2,6 +2,7 @@ package com.firebaseapp.waterintakereminder.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,6 +19,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    private static final String TAG = "ProfileActivity";
+
+    // TODO: Add listener for bottom navigation
     private BottomNavigationView mBottomNavigationView;
     private TextView mTextViewUsername;
 
@@ -35,10 +39,10 @@ public class ProfileActivity extends AppCompatActivity {
         mTextViewUsername.setText(currentUser.getDisplayName());
     }
 
-
     /**
      * Signs the current user out of application and redirects him
      * to the holder activity.
+     *
      * @param view View that is being clicked on
      */
     public void signOut(View view) {
@@ -48,10 +52,14 @@ public class ProfileActivity extends AppCompatActivity {
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+                            Log.d(TAG, "signOut: Signing out");
                             startActivity(new Intent
                                     (ProfileActivity.this, HolderActivity.class));
+                            finish();
                         }
                     });
         }
     }
+
+    // TODO: Create updateUserInfo(FirebaseUser currentUser)
 }
