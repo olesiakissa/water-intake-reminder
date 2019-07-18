@@ -6,7 +6,7 @@
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/primaryAccentColor</item>
     </style>
 
     <style name="AppTheme.SplashScreen">

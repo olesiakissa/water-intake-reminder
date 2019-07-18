@@ -53,7 +53,7 @@
                     android:layout_marginTop="@dimen/margin_8dp"
                     android:fontFamily="@font/raleway_regular"
                     android:text="@string/name"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/primaryAccentColor"
                     android:textSize="@dimen/textsize_main_small" />
 
                 <LinearLayout
@@ -69,7 +69,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
 
                         <TextView
                             android:id="@+id/text_profile_age"
@@ -94,7 +96,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
 
                         <TextView
                             android:id="@+id/text_profile_weight"
@@ -179,7 +183,9 @@
                         style="@style/ProfileUserInfoGoalsText.EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -201,7 +207,9 @@
                         style="@style/ProfileUserInfoGoalsText.EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -223,7 +231,9 @@
                         style="@style/ProfileUserInfoGoalsText.EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
                 </LinearLayout>
 
             </RelativeLayout>
@@ -236,7 +246,7 @@
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:itemBackground="@color/colorAccent"
+            app:itemBackground="@color/secondaryAccentColor"
             app:itemIconTint="@android:color/white"
             app:itemTextColor="@android:color/white"
             app:menu="@menu/bottom_nav_menu" />

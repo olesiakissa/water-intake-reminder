@@ -7,8 +7,28 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/raleway_regular</item>
-        <item name="android:layout_marginTop">@dimen/margin_24dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_8dp</item>
         <item name="android:layout_marginBottom">@dimen/margin_8dp</item>
+    </style>
+
+    <style name="BtnLogin">
+        <item name="android:layout_width">@dimen/width_250</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:layout_marginTop">@dimen/margin_8dp</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8dp</item>
+    </style>
+
+    <style name="CustomBtnSignup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:background">@drawable/btn_signin</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8dp</item>
+        <item name="android:layout_marginRight">@dimen/margin_8dp</item>
     </style>
 
     <style name="BtnProfileSignOut">

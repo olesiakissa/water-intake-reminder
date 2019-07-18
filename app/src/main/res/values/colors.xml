@@ -9,6 +9,6 @@
     <color name="secondaryDarkColor">#b0bec9</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
-    <color name="colorAccent">#f57c00</color>
-    <color name="dropColor">#3caed6</color>
+    <color name="primaryAccentColor">#f57c00</color>
+    <color name="secondaryAccentColor">#3caed6</color>
 </resources>

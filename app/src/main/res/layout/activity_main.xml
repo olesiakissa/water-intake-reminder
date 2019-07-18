@@ -12,7 +12,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <!--todo extract common textstyles to separate xml-->
+        <!--TODO Extract common text styles to separate xml-->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_main_stayhydrated"
@@ -31,31 +31,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="@dimen/margin_24dp"
-                    android:layout_marginLeft="@dimen/margin_24dp"
                     android:layout_marginTop="@dimen/margin_24dp"
-                    android:fontFamily="@font/raleway_thin"
                     android:text="@string/stay_hydrated"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/primaryDarkColor"
-                    android:textSize="@dimen/textsize_main_large" />
+                    style="@style/WirLogoText"/>
 
                 <TextView
                     android:id="@+id/text_main_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Username"
                     android:layout_below="@id/text_main_stayhydrated"
-                    android:layout_marginStart="@dimen/margin_24dp"
-                    android:layout_marginLeft="@dimen/margin_24dp"
-                    android:layout_marginTop="@dimen/margin_8dp"
-                    android:layout_marginBottom="@dimen/margin_24dp"
-                    android:fontFamily="@font/raleway_regular"
-                    android:text="@string/username"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/textsize_main_medium"
-                    android:textStyle="bold" />
+                    android:text="@string/username" />
             </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -94,11 +82,13 @@
                         android:id="@+id/text_main_dailygoal_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginLeft="@dimen/margin_8dp"
                         android:layout_marginTop="@dimen/margin_24dp"
                         android:fontFamily="@font/raleway_thin"
                         android:text="@string/text_main_dailygoal_value_placeholder"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/primaryAccentColor"
                         android:textSize="@dimen/textsize_main_small" />
                 </LinearLayout>
 
@@ -127,11 +117,13 @@
                         android:id="@+id/text_main_consumed_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginLeft="@dimen/margin_8dp"
                         android:layout_marginTop="@dimen/margin_24dp"
                         android:fontFamily="@font/raleway_thin"
                         android:text="@string/text_main_consumed_value_placeholder"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/primaryAccentColor"
                         android:textSize="@dimen/textsize_main_small" />
                 </LinearLayout>
             </RelativeLayout>
@@ -174,7 +166,7 @@
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:itemBackground="@color/colorAccent"
+            app:itemBackground="@color/secondaryAccentColor"
             app:itemIconTint="@android:color/white"
             app:itemTextColor="@android:color/white"
             app:menu="@menu/bottom_nav_menu" />

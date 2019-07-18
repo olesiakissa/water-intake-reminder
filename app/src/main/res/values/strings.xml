@@ -32,4 +32,10 @@
     <string name="weight_goal">Weight goal</string>
     <string name="sign_out">Sign Out</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="go">GO</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
 </resources>
