@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="textsize_main_small">24sp</dimen>
     <dimen name="textsize_main_large">48sp</dimen>
     <dimen name="textsize_main_medium">36sp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">14sp</dimen>
+
     <dimen name="margin_24dp">24dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="padding_1dp">1dp</dimen>
+
     <dimen name="radius_5dp">5dp</dimen>
+
     <dimen name="width_250">250dp</dimen>
+
     <dimen name="btn_done_signup_size">64dp</dimen>
     <dimen name="btn_cradius_32">32dp</dimen>
 </resources>
