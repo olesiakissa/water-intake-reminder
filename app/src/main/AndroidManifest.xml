@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.LoginActivity"></activity>
-        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.ProfileFragment" />
         <activity
             android:name=".ui.HolderActivity"
             android:theme="@style/AppTheme.SplashScreen">
