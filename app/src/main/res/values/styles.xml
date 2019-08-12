@@ -13,4 +13,12 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 
+    <style name="CustomNumberPicker">
+        <item name="android:padding">@dimen/padding_1dp</item>
+        <item name="android:textColor">@color/primaryAccentColor</item>
+        <item name="android:textSize">@dimen/textsize_main_medium</item>
+        <item name="android:layout_marginTop">@dimen/margin_8dp</item>
+        <item name="android:divider">@color/primaryDarkColor</item>
+    </style>
+
 </resources>

@@ -40,4 +40,15 @@
     <string name="sign_up">Sign up</string>
     <string name="home">Home</string>
     <string name="edit_profile">Edit profile</string>
+    <string name="action_back_description">Action back</string>
+    <string name="general">General</string>
+    <string name="personal">Personal</string>
+    <string name="info_popup">These values are used to automatically calculate your daily water intake. You can edit it manually later.</string>
+    <string name="current_weight">Current weight</string>
+    <string name="edit_profile_picture">Edit profile picture</string>
+    <string name="button_save_changes">Button save changes</string>
+    <string name="button_personal_information">Button personal information</string>
+    <string name="goals">Goals</string>
+    <string name="hint_lbs">lbs</string>
+    <string name="hint_oz">oz</string>
 </resources>

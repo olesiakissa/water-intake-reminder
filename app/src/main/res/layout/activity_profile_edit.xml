@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileEditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layout_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:id="@+id/layout_toolbar_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/action_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_action_back"
+                    android:contentDescription="@string/action_back_description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/action_back"
+                    android:layout_marginStart="@dimen/margin_48dp"
+                    android:layout_marginLeft="@dimen/margin_48dp"
+                    android:text="@string/edit_profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_main_small"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageButton
+                    android:id="@+id/action_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_24dp"
+                    android:layout_marginRight="@dimen/margin_24dp"
+                    android:background="@drawable/ic_action_save"
+                    android:contentDescription="@string/button_save_changes" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_edit_userpic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/edit_userpic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_24dp"
+                    android:background="@drawable/round_userpic_bg"
+                    android:contentDescription="@string/edit_profile_picture"
+                    android:src="@drawable/ic_person_large" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/section_general"
+                style="@style/LoginScreenSmallText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/general"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/LoginScreenSmallText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/LoginScreenSmallText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:background="?android:attr/listDivider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_holder_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/section_personal"
+                        style="@style/LoginScreenSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/personal"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <ImageButton
+                        android:id="@+id/action_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:layout_marginLeft="@dimen/margin_8dp"
+                        android:background="@drawable/ic_action_info"
+                        android:contentDescription="@string/button_personal_information" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:baselineAligned="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!--TODO: Change hints in input fields according to
+                         metric or imperial system chosen by user-->
+
+                    <LinearLayout
+                        android:id="@+id/layout_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_age"
+                            style="@style/LoginScreenSmallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/age"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <NumberPicker
+                            android:id="@+id/np_age"
+                            style="@style/CustomNumberPicker"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_weight"
+                            style="@style/LoginScreenSmallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/current_weight"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_edit_currentweight"
+                            style="@style/ProfileMaterialEditText"
+                            android:hint="@string/hint_lbs"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_holder_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/section_goals"
+                        style="@style/LoginScreenSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/goals"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:baselineAligned="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/layout_water_goals"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_goals"
+                            style="@style/LoginScreenSmallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/profile_water_intake_goal"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_edit_watergoal"
+                            style="@style/ProfileMaterialEditText"
+                            android:hint="@string/hint_oz"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_weight_goals"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_weight_goals"
+                            style="@style/LoginScreenSmallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/weight_goal"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_edit_weightgoal"
+                            style="@style/ProfileMaterialEditText"
+                            android:hint="@string/hint_lbs"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

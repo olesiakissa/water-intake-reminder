@@ -4,4 +4,5 @@
     <solid android:color="@color/secondaryLightBackground" />
     <corners android:radius="100dp" />
 
+    <stroke android:color="@color/secondaryDarkColor" android:width="0.1dp" />
 </shape>
