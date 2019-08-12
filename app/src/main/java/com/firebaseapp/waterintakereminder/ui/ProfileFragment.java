@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebaseapp.waterintakereminder.R;
+import com.firebaseapp.waterintakereminder.util.ExtraConstants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +29,7 @@ public class ProfileFragment extends Fragment
 
     private TextView mTextViewUsername;
     private ImageButton mBtnSignout;
+    private Button mBtnEditProfile;
 
     public ProfileFragment() {
     }
@@ -38,6 +41,7 @@ public class ProfileFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         mTextViewUsername = view.findViewById(R.id.text_profile_username);
         mBtnSignout = view.findViewById(R.id.btn_signout);
+        mBtnEditProfile = view.findViewById(R.id.btn_edit_profile);
         return view;
     }
 
@@ -52,6 +56,13 @@ public class ProfileFragment extends Fragment
         mTextViewUsername.setText(currentUser.getDisplayName());
 
         mBtnSignout.setOnClickListener(this);
+        mBtnEditProfile.setOnClickListener(this);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        // TODO: 8/4/19 Process request by saving data into db and update ui according to the saved data 
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -61,7 +72,15 @@ public class ProfileFragment extends Fragment
                 signOut();
                 break;
             // TODO: Add cases for updating a profile pic and saving user info
+            case R.id.btn_edit_profile:
+                editProfile();
+
         }
+    }
+
+    private void editProfile() {
+        Intent editProfile = new Intent(getActivity(), ProfileEditActivity.class);
+        startActivityForResult(editProfile, ExtraConstants.RC_PROFILE_EDIT);
     }
 
     /**
